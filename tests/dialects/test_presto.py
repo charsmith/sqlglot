@@ -758,6 +758,7 @@ class TestPresto(Validator):
             "FROM_UTF8(x, y)",
             write={
                 "presto": "FROM_UTF8(x, y)",
+                "duckdb": "DECODE(x)",
             },
         )
         self.validate_all(
